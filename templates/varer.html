@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %} Hjem {% endblock %}
+
+{% block content %}
+
+{% for vare in varere %}
+    <p>{{ vare.navn }}</p>
+    <p>{{ vare.pris }}kr</p>
+    <img src={{vare.bilde}}>
+{% endfor %}
+
+{% endblock%}

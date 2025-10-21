@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <h1>Kontakt Innformasjon</h1>
+    <p>For eventuelle klager om kantina kontakt en av kontakt personene for kantina</p>
+    
+
+{% for kontakt in kontakter %}
+    <p>{{ kontakt.person }}</p>
+    <p>{{ kontakt.email }}</p>
+    <p>{{ kontakt.nummer }}</p>
+    <p> Bilder kontakt</p>
+{% endfor%}
+
+    {% endblock %}
