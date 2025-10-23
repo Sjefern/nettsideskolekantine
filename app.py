@@ -31,8 +31,8 @@ def meny():
 @app.route('/kontakt')
 def kontakt():
     kontakter = [
-        {"person": "Sebastian", "email": "sebastian@hotmail.com", "nummer": "+ 47 901 33 902"},
-        {"person": "Marcus", "email": "marcus@hotmail.com", "nummer": "+ 47 902 44 903"}
+        {"person": "Sebastian", "email": "sebastian@hotmail.com", "nummer": "+ 47 901 33 902", "bilde": "/static/images/smilieemoji.jpeg"},
+        {"person": "Marcus", "email": "marcus@hotmail.com", "nummer": "+ 47 902 44 903", "bilde": "/static/images/smilieemoji.jpeg"}
     ]
     return render_template("kontakt.html", kontakter=kontakter)
 

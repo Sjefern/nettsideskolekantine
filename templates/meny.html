@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %} Meny {% endblock %}
+
+{% block content%}
+
+<h1>Ukens Meny</h1>
+
+<div class="menycontainer">
+{% for meny in menyer %}
+<div class="menyboks">
+    <p class="menydag">{{ meny.dag }}</p>
+    <p class="menydagens">{{ meny.dagens }}</p>
+    <img class="menybilde" src={{meny.bilde}}>
+</div>
+{% endfor %}
+</div>
+
+{% endblock%}

@@ -1,13 +1,23 @@
 {% extends "base.html" %}
 
-{% block title %} Hjem {% endblock %}
+{% block title %} Varer {% endblock %}
 
 {% block content %}
 
-{% for vare in varere %}
-    <p>{{ vare.navn }}</p>
-    <p>{{ vare.pris }}kr</p>
-    <img src={{vare.bilde}}>
-{% endfor %}
+<h1> Varer </h1>
+
+<p class="innhold">
+    Dette er utvalget vårt av varer
+</p>
+
+<div class="varecontainer">
+    {% for vare in varere %}
+    <div class="vareboks">
+        <img class="varebilde" src="{{ vare.bilde }}">
+        <p class="varenavn">{{ vare.navn }}</p>
+        <p class="varepris">{{ vare.pris }} kr</p>
+    </div>
+    {% endfor %}
+</div>
 
 {% endblock%}
