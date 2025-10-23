@@ -1,23 +1,23 @@
-{% extends "base.html" %}
+{% extends "base.html" %} <!-- Arver layout og struktur fra base.html -->
 
-{% block title %} Kontakt {% endblock %}
+{% block title %} Kontakt {% endblock %} <!-- Setter tittelen på siden til "Kontakt" -->
 
-{% block content %}
-<h1>Kontakt Innformasjon</h1>    
+{% block content %} <!-- Starter content-blokken som fylles inn i base.html -->
+<h1>Kontakt Innformasjon</h1> <!-- Hovedoverskrift på siden -->
     
-<p class="innhold">
+<p class="innhold"> <!-- Avsnitt med klassen "innhold" for styling -->
     For eventuelle klager om kantina kontakt en av kontakt personene for kantina
 </p>    
     
-<div class="kontaktcontainer">
-{% for kontakt in kontakter %}
-    <div class="kontaktboks">
-        <p class="kontakt">{{ kontakt.person }}</p>
-        <p class="kontakt">{{ kontakt.email }}</p>
-        <p class="kontakt">{{ kontakt.nummer }}</p>
-        <img class="kontaktbilde" src={{kontakt.bilde}}>
+<div class="kontaktcontainer"> <!-- Container som holder alle kontakt-boksene -->
+{% for kontakt in kontakter %} <!-- Starter loop gjennom alle kontakter i databasen -->
+    <div class="kontaktboks"> <!-- Hver kontakt vises i en egen boks -->
+        <p class="kontakt">{{ kontakt.person }}</p> <!-- Viser kontaktens navn -->
+        <p class="kontakt">{{ kontakt.email }}</p> <!-- Viser kontaktens epost -->
+        <p class="kontakt">{{ kontakt.nummer }}</p> <!-- Viser kontaktens telefonnummer -->
+        <img class="kontaktbilde" src={{kontakt.bilde}}> <!-- Viser kontaktens bilde -->
     </div>
-{% endfor%}
+{% endfor%} <!-- Slutt på loop over kontakter -->
 </div>
 
-{% endblock %}
+{% endblock %} <!-- Lukker content-blokken -->

@@ -1,23 +1,23 @@
-{% extends "base.html" %}
+{% extends "base.html" %} <!-- Arver layout og struktur fra base.html -->
 
-{% block title %} Varer {% endblock %}
+{% block title %} Varer {% endblock %} <!-- Setter tittelen på siden til "Varer" -->
 
-{% block content %}
+{% block content %} <!-- Starter content-blokken som fylles inn i base.html -->
 
-<h1> Varer </h1>
+<h1> Varer </h1> <!-- Hovedoverskrift på siden -->
 
-<p class="innhold">
+<p class="innhold"> <!-- Avsnitt med klassen "innhold" for styling -->
     Dette er utvalget vårt av varer
 </p>
 
-<div class="varecontainer">
-    {% for vare in varere %}
-    <div class="vareboks">
-        <img class="varebilde" src="{{ vare.bilde }}">
-        <p class="varenavn">{{ vare.navn }}</p>
-        <p class="varepris">{{ vare.pris }} kr</p>
+<div class="varecontainer"> <!-- Container som holder alle vare-boksene -->
+    {% for vare in varere %} <!-- Starter loop gjennom alle varer i databasen -->
+    <div class="vareboks"> <!-- Hver vare vises i en egen boks -->
+        <img class="varebilde" src="{{ vare.bilde }}"> <!-- Viser bilde av varen -->
+        <p class="varenavn">{{ vare.navn }}</p> <!-- Viser navnet på varen -->
+        <p class="varepris">{{ vare.pris }} kr</p> <!-- Viser prisen på varen -->
     </div>
-    {% endfor %}
+    {% endfor %} <!-- Slutt på loop over varer -->
 </div>
 
-{% endblock%}
+{% endblock%} <!-- Lukker content-blokken -->

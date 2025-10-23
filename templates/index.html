@@ -1,16 +1,17 @@
 
-{% extends "base.html" %}
+{% extends "base.html" %} <!-- Arver layout og struktur fra base.html -->
 
-{% block title %}Hjem{% endblock %}
+{% block title %}Hjem{% endblock %} <!-- Setter tittelen på siden til "Hjem" -->
 
-{% block content %}
-<h1>Akademiets Kantinen</h1>
-<p class="innhold">
+{% block content %} <!-- Starter content-blokken som fylles inn i base.html -->
+<h1>Akademiets Kantinen</h1> <!-- Hovedoverskrift på siden -->
+<p class="innhold"> <!-- Avsnitt med klassen "innhold" for styling -->
     Kantinenettsiden gir deg oversikt over ukens meny, varer og kontakt innformasjon. 
     Her kan du enkelt se dagens rett, planlegge måltidene dine og holde deg oppdatert på tilbud og kampanjer.
 </p>
 
-<img class="forsidebilde" src=/static/images/kantine.jpg>
+<img class="forsidebilde" src=/static/images/kantine.jpg> <!-- Bilde på forsiden med klassen "forsidebilde" -->
 
-{% endblock %}
+
+{% endblock %} <!-- Lukker content-blokken -->
 

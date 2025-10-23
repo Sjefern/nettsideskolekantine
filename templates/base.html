@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <title>Kantine Nettside Akademiet</title>
+    <link rel="stylesheet" href="/static/css/style.css"> <!-- Koble til ekstern CSS-fil -->
+    <title>Kantine Nettside Akademiet</title> <!-- Tekst som vises i nettleserfanen -->
 </head>
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="/">Hjem</a></li>
-            <li><a href="meny">Meny</a></li>
-            <li><a href="varer">Varer</a></li>
-            <li><a href="kontakt">Kontakt</a></li>
+    <nav class="navbar"> <!-- Navigasjonsfelt (menylinje) -->
+        <ul> <!-- Uordnet liste for navigasjonslenker -->
+            <li><a href="/">Hjem</a></li> <!-- Lenke til startsiden -->
+            <li><a href="meny">Meny</a></li> <!-- Lenke til meny-siden -->
+            <li><a href="varer">Varer</a></li> <!-- Lenke til varer-siden -->
+            <li><a href="kontakt">Kontakt</a></li> <!-- Lenke til kontakt-siden -->
         </ul>
     </nav>
-    {%block content%}{%endblock%}
+    {%block content%}{%endblock%} <!-- Django template-blokk for å sette inn sideinnhold på sidene som arver-->
 </body>
-<footer class="footer">
-    <p class="tekstfooter"> Akademiets Kantine </p>
+<footer class="footer"> <!-- Footer som vises nederst på siden -->
+    <p class="tekstfooter"> Akademiets Kantine </p> <!-- Tekst i footer -->
 </footer>
 </html>

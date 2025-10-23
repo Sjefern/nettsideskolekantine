@@ -1,19 +1,19 @@
-{% extends "base.html" %}
+{% extends "base.html" %} <!-- Arver layout og struktur fra base.html -->
 
-{% block title %} Meny {% endblock %}
+{% block title %} Meny {% endblock %} <!-- Setter tittelen på siden til "Meny" -->
 
-{% block content%}
+{% block content%} <!-- Starter content-blokken som fylles inn i base.html -->
 
-<h1>Ukens Meny</h1>
+<h1>Ukens Meny</h1> <!-- Hovedoverskrift på siden -->
 
-<div class="menycontainer">
-{% for meny in menyer %}
-<div class="menyboks">
-    <p class="menydag">{{ meny.dag }}</p>
-    <p class="menydagens">{{ meny.dagens }}</p>
-    <img class="menybilde" src={{meny.bilde}}>
+<div class="menycontainer"> <!-- Container som holder alle meny-boksene -->
+{% for meny in menyer %} <!-- Starter loop gjennom alle menyer i databasen -->
+<div class="menyboks"> <!-- Hver dags meny vises i en egen boks -->
+    <p class="menydag">{{ meny.dag }}</p> <!-- Viser dagen (f.eks. mandag, tirsdag) -->
+    <p class="menydagens">{{ meny.dagens }}</p> <!-- Viser dagens rett -->
+    <img class="menybilde" src={{meny.bilde}}> <!-- Viser bilde av dagens rett -->
 </div>
-{% endfor %}
+{% endfor %} <!-- Slutt på loop over menyer -->
 </div>
 
-{% endblock%}
+{% endblock%} <!-- Lukker content-blokken -->
