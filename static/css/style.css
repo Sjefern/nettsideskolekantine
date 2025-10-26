@@ -104,6 +104,40 @@ body {
     border-radius: 10px;    /* Runde hjørner på bildene */
 }
 
+.kontaktcontainer {
+    display: flex;  /* Bruker flexbox for å plassere kontaktboksene side om side */
+    flex-wrap: wrap;    /* Tillater at boksene flyttes ned på neste rad når det ikke er plass */
+    justify-content: center;    /* Sentrerer alle kontaktboksene horisontalt på siden */
+    gap: 1.5rem;    /* Setter mellomrom mellom hver kontaktboks */
+    margin-top: 2rem;   /* Legger til litt luft over hele kontaktseksjonen */
+}
+
+.kontaktboks {
+    display: flex;  /* Gjør boksen til en flex-container */
+    flex-direction: column; /* Plasserer innholdet vertikalt oppå hverandre */
+    align-items: center;    /* Sentrerer alt innholdet horisontalt i boksen */
+    width: 300px;   /* Setter fast bredde på hver kontaktboks for jevn layout */
+    background-color: #f2f2f2;  /* Lys grå bakgrunn for å skille boksene fra bakgrunnen */
+    padding: 1rem;  /* For å gi plass mellom innhold og kant */
+    border-radius: 12px;    /* Avrunder hjørnene */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);  /* Gir en svak skygge */
+    text-align: center; /* Sentrerer tekstinnholdet i boksen */
+}
+
+.kontakt {
+    margin: 0.3rem 0;   /* Litt mellomrom over og under hver tekstlinje */
+    font-size: 1rem;    /* Setter tekststørrelse */
+    font-weight: 500;   /* Gjør teksten tykkere */
+}
+
+.kontaktbilde {
+    width: 100px;   /* Setter fast bredde på bildet */
+    height: 100px;  /* Setter fast høyde på bildet */
+    object-fit: cover;  /* Sørger for at bildet fyller rammen uten å se stekket ut */
+    border-radius: 50%; /* Gjør bildet rundt */
+    margin-top: 0.5rem  /* Legger til litt luft over hele kontaktseksjonen */
+}
+
 .footer {
     padding: 0; /* Fjerner innvendig avstand standard padding */
     margin: 0;  /* Fjerner ytre margin slik at footeren ligger helt inntil kanten nederst */
