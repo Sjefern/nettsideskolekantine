@@ -1,47 +1,105 @@
 
-
-h1{
-    text-align: center;
+.navbar {
+    position: fixed;    /* Fester navigasjonslinjen til toppen av skjermen slik at den alltid er synlig når man scroller */
+    top: 0; /* Plasserer navbar helt øverst på siden */
+    left: 0;    /* Starter posisjoneringen fra venstre kant av vinduet */
+    width: 100%;    /* Gjør at navbar dekker hele bredden av skjermen */
+    z-index: 1000;  /* Sørger for at navbar ligger over alt annet innhold (unngår at den blir skjult bak bilder/tekst) */
 }
 
-
-
-.navbar ul{
-    list-style-type: none;
-    background-color: rgb(194, 52, 52);
-    padding: 0;
-    margin: 0;
-    text-align: center;
+.navbar ul {
+    list-style-type: none;  /* Fjerner standard punktmerking som ul-listen har fra før */
+    background-color: rgb(249, 136, 23);    /* Setter bakgrunnsfargen til oransje */
+    padding: 0; /* Fjerner standard innvendig avstand (padding) som ul vanligvis har */
+    margin: 0;  /* Fjerner standard avstand i kantene (margin) slik at navbaren sitter fint med kanten */
+    text-align: center; /* Sentrerer lenkene horisontalt inni navbaren */
 }
+
 .navbar a {
-    color: aqua;
-    text-decoration: none;
-    padding: 20px;
-    display: block;
-
+    color: rgb(255, 255, 255);  /* Gjør lenketeksten hvit */
+    text-decoration: none;  /* Fjerner standard understrek på lenker */
+    padding-right: 50px;    /* Ekstra plass på høyre side av lenkene */
+    padding-left: 100px;    /* Ekstra plass på venstre side av lenkene */
+    padding: 20px;  /* Generell padding rundt lenken (overstyrer de to over) */
+    display: block; /* Gjør lenkene til blokkelementer slik at hele området blir klikkbart, ikke bare teksten */
 }
 
-.navbar a:hover{
-    background-color: black;
+.navbar a:hover {
+    background-color: black;    /* Når man holder musepekeren over lenken, byttes bakgrunnsfargen for å gi visuell respons */
 }
 
-.navbar li{
-     display: inline-block;
+.navbar li {
+    display: inline-block;  /* Plasserer listeelementene horisontalt i stedet for vertikalt */
+}
+
+h1 {
+    text-align: center; /* Sentrerer overskriften i midten av siden */
+    margin-top: 2rem;   /* Gir luft over overskriften */
+    font-size: 2rem;    /* Setter størrelsen på teksten */
+    color: #000000; /* Svart tekstfarge */
+}
+
+.innhold {
+    text-align: center; /* Sentrerer teksten horisontalt */
+    font-size: 25px;    /* Øker tekststørrelsen */
+}
+
+.forsidebilde {
+    width: 100%;    /* Bildet fyller hele bredden */
+    overflow: hidden;   /* Skjuler deler av bildet som stikker utenfor containerens høyde */
+    height: 200px;  /* Setter en fast høyde for bildet */
+    object-fit: cover;  /* Beskjærer bildet for å fylle containeren uten å gjøre bildet utstrekket */
+    object-position: center;    /* Sørger for at midten av bildet er synlig */
+    display: block; /* Fjerner uønsket mellomrom under bildet som kommer av at <img> er inline som standard */
 }
 
 body {
-  background: lightblue;
-  color: black;
-  padding: 0px;
-  margin: 0;
+    background: rgb(255, 255, 255); /* Setter hvit bakgrunnsfarge */
+    color: black;   /* Setter svart som standard tekstfarge */
+    padding: 0px;   /* Fjerner standard innvendig padding fra nettleseren */
+    margin: 0;  /* Fjerner standard margin fra nettleseren */
+    padding-bottom: 100px;  /* Legger til plass nederst slik at footeren ikke dekker innhold */
+    padding-top: 70px;  /* Legger til plass øverst slik at innholdet ikke havner bak navbaren */
+    font-family: Arial, Helvetica, sans-serif;  /* Setter en enkel fontfamilie */
 }
 
-.footer {
-    position: fixed;
-    bottom: 0px;
-    text-align: center;
-    background-color: beige;
-    width: 100%;
-  
+.menycontainer {
+    display: flex;  /* Gjør elementet til en flexcontainer som lar oss kontrollere layouten */
+    flex-direction: column; /* Plasserer elementene (menybokser) under hverandre i en kolonne */
+    align-items: center;    /* Sentrerer boksene horisontalt i containeren */
+    justify-content: center;    /* Sentrerer innholdet vertikalt */
+    gap: 1rem;  /* Gir jevn avstand mellom hver menyboks */
+    width: 100%;    /* Containeren strekker seg over hele bredden */
+    margin-top: 2rem;   /* Gir luft over containeren */
+}
 
+.menyboks {
+    display: flex;  /* Bruker flex for å plassere dag, dagens og bilde på samme rad */
+    justify-content: space-evenly;  /* Fordeler plass jevnt mellom elementene i raden */
+    align-items: center;    /* Justerer tekst og bilder slik at de ligger på midten vertikalt */
+    width: 70%; /* Gjør hver boks 70% av sidens bredde */
+    background-color: #f9f9f9;  /* Lys grå bakgrunn */
+    padding: 1rem 2rem; /* Innvendig avstand for at innholdet ikke skal ligge helt inntil kantene */
+    border-radius: 12px;    /* Runde hjørner */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);   /* Legger på svak skygge */
+}
+
+.menydag,
+.menydagens,
+.menybilde {
+    flex: 1.3;  /* Gir hvert element lik fleksplass slik at de tar omtrent like mye rom */
+    text-align: center; /* Sentrerer innholdet i hver kolonne */
+}
+
+.menydag,
+.menydagens {
+    font-size: 1.1rem;  /* Font størrelse */
+    font-weight: 500;   /* Gjør teksten tykkere */
+}
+
+.menybilde {
+    width: 100px;   /* Setter fast bredde for bildene i menyen */
+    height: 100px;  /* Setter fast høyde for bildene */
+    object-fit: cover;  /* Sørger for at bildet fyller rammen uten å strekke seg */
+    border-radius: 10px;    /* Runde hjørner på bildene */
 }
