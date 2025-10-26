@@ -103,3 +103,24 @@ body {
     object-fit: cover;  /* Sørger for at bildet fyller rammen uten å strekke seg */
     border-radius: 10px;    /* Runde hjørner på bildene */
 }
+
+.footer {
+    padding: 0; /* Fjerner innvendig avstand standard padding */
+    margin: 0;  /* Fjerner ytre margin slik at footeren ligger helt inntil kanten nederst */
+    position: fixed;    /* Gjør at footeren alltid vises nederst på skjermen, selv når man scroller */
+    bottom: 0;  /* Plasserer footeren helt nederst i vinduet */
+    left: 0;    /* Starter foteren helt til venstre */
+    width: 100%;    /* Gjør at den dekker hele vinduet */
+    z-index: 1000;  /* Legger footeren øverst slik at den ikke havner bak annet innhold */
+    background-color: rgb(249, 136, 23);    /* Setter bakgrunnsfargen til oransje */
+    color: white;   /* Gjør teksten hvit */
+    text-align: center; /* Sentrerer teksten horisontalt inne i footeren */
+    height: 50px;   /* Gir footeren en fast høyde */
+}
+
+.tekstfooter {
+    text-align: center; /* Sentrerer teksten */
+    color: white;   /* Setter tekstfargen hvit */
+    font-size: 20px;    /* Øker tekststørrelsen litt */
+}
+
