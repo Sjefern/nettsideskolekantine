@@ -137,6 +137,52 @@ body {
     border-radius: 50%; /* Gjør bildet rundt */
     margin-top: 0.5rem  /* Legger til litt luft over hele kontaktseksjonen */
 }
+.varecontainer {
+    display: flex;  /* Bruker flexbox for å organisere varene i rader */
+    flex-wrap: wrap;    /* Gjør at varene automatisk flyttes til ny rad hvis det ikke er plass */
+    justify-content: center;    /* Sentrerer alle vareboksene horisontalt */
+    gap: 2rem;  /* Avstand mellom hver vareboks */
+    margin-top: 2rem;   /* Litt luft mellom overskrift og varene */
+}
+
+.vareboks {
+    display: flex;  /* Gjør hver vareboks til en flex container */
+    flex-direction: column; /* Plasserer bilde navn og pris vertikalt */
+    align-items: center;    /* Sentrerer innholdet horisontalt i boksen */
+    width: 300px;   /* Setter en fast bredde på hver boks for jevn layout */
+    background-color: #f8f8f8;  /* Lys bakgrunnsfarge */
+    padding: 1.5rem;    /* Innvendig luft */
+    border-radius: 12px;    /* Avrundede hjørner */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1); /* Lager skygge */
+    text-align: center; /* Sentrerer teksten under bildet */
+    transition: transform 0.2s; /* Gjør at bevegelsen ved hover blir jevn og myk */
+}
+
+.vareboks:hover {
+    transform: translateY(-5px);    /* Flytter boksen litt opp når man holder musen over den */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Øker skyggen for å forsterke løfte effekten */
+}
+
+.varebilde {
+    width: 200px;   /* Fast bredde for bilder, slik at de er like store */
+    height: 200px;  /* Fast høyde for bilde */
+    object-fit: cover;  /* Bevarer proporsjonene og beskjærer bildet hvis nødvendig */
+    border-radius: 10px;    /* Avrunder kantene litt */
+    margin-bottom: 0.8rem;  /* Litt luft mellom bildet og teksten under */
+}
+
+.varenavn {
+    font-size: 1.2rem;  /* Gjør teksten større */
+    font-weight: 600;   /* Gjør teksten tykkere  */
+    margin: 0.4rem 0;   /* Litt mellomrom over og under teksten */
+}
+
+.varepris {
+    font-size: 1.1rem;  /* Gjør teksten større*/
+    font-weight: 500;   /* Gjør teksten tykkere */
+    color: #000000;    /* Gjør tekst fargen svart */
+    margin-bottom: 0.5rem;  /* Litt luft under prisen */
+}
 
 .footer {
     padding: 0; /* Fjerner innvendig avstand standard padding */
